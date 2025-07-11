@@ -1,8 +1,13 @@
 import streamlit as st
 from openapi import get_travel_ideas
 from weather import get_weather
+import openai
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
-st.title("Travel buddy")
+
+st.title("Travel buddy for fun travelling")
 
 interests = st.text_input("What are your travel interests? (e.g. beaches, history, adventure)")
 budget = st.text_input("Budget (optional, e.g. $1000, 'low', 'high')")
